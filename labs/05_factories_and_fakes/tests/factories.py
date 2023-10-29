@@ -19,4 +19,14 @@ class AccountFactory(factory.Factory):
     class Meta:
         model = Account
 
+    id = factory.Sequence(lambda n: n)
+    name = factory.Faker("name")
+    email = factory.Faker("email")
+    phone_number = factory.Faker("phone_number")
+    disabled = FuzzyChoice(choices=[True, False])
+    date_joined = FuzzyDate(date(2008, 1, 1)) # Create an AccountFactory class, Step 05.02
+
+    class Meta:
+        model = Account
+
     # Add attributes here...
