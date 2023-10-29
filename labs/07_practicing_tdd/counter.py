@@ -46,4 +46,4 @@ def delete_counter(name):
     del(COUNTERS[name])
 
     app.logger.info(f"Counter: {name} has been deleted")
-    return '', status.HTTP_204_NO_CONTENT # Step 6: Implement delete a counter, code pasted from step 07.06
+    return '', status.HTTP_204_NO_CONTENT # Step 6: Implement delete a counter, code pasted from step 07.06 
